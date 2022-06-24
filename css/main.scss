@@ -59,6 +59,7 @@ $innerwidth : 1320px;
 .banner {
   position: relative;
   display: block;
+  background-color: #ffcc00;
 }
 /* 레이아웃 */
 .wrap {
@@ -93,10 +94,12 @@ $innerwidth : 1320px;
   position: relative;
   display: block;
   .footer-top {
-    .inner {
-      color: #777;
-    }
+    position: relative;
+    display: block;
   }
-  .footer-bottom{}
-}
 
+  .footer-bottom{
+    position: relative;
+    display: block;
+  }
+}

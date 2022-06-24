@@ -55,6 +55,7 @@ body {
 .banner {
   position: relative;
   display: block;
+  background-color: #ffcc00;
 }
 
 /* 레이아웃 */
@@ -92,6 +93,11 @@ body {
   position: relative;
   display: block;
 }
-.footer .footer-top .inner {
-  color: #777;
+.footer .footer-top {
+  position: relative;
+  display: block;
+}
+.footer .footer-bottom {
+  position: relative;
+  display: block;
 }/*# sourceMappingURL=main.css.map */
