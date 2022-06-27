@@ -254,6 +254,38 @@ body {
   background: url("../images/ico-login.png") no-repeat center;
 }
 
+@media all and (max-width: 1080px) {
+  .menu > li > a {
+    padding: 0 18px !important;
+  }
+
+  .member-list > li {
+    margin-left: 22px !important;
+  }
+}
+@media all and (max-width: 880px) {
+  .menu > li > a {
+    padding: 0 10px !important;
+  }
+}
+@media all and (max-width: 800px) {
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .gnb {
+    display: none !important;
+  }
+
+  .member {
+    display: none !important;
+  }
+}
 /* 비주얼 */
 .visual {
   position: relative;
@@ -339,6 +371,48 @@ body {
   padding: 20px 30px;
 }
 
+@media all and (max-width: 760px) {
+  .visual {
+    height: 69vw;
+  }
+
+  .sw-visual-control {
+    top: 41.666vw !important;
+  }
+
+  .visual-txt {
+    top: 46vw !important;
+  }
+
+  .visual-title {
+    font-size: 20px !important;
+    margin-bottom: 2.65vw !important;
+  }
+
+  .visual-desc {
+    font-size: 12px !important;
+    margin-bottom: 1.5vw !important;
+  }
+
+  .visual-bt {
+    font-size: 12px !important;
+    padding: 1vw 1.5vw !important;
+  }
+}
+@media all and (max-width: 550px) {
+  .visual {
+    height: 640px;
+  }
+
+  .sw-visual-control {
+    top: 330px !important;
+  }
+
+  .visual-txt {
+    top: 390px !important;
+    margin-bottom: 0;
+  }
+}
 /* 카테고리 */
 .category {
   position: relative;
