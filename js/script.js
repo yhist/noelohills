@@ -4,20 +4,20 @@ $(document).ready(function () {
     let mb_div = $('.mb-div');
     // 모바일 보기 버튼 기능
     let mb_bt = $('.mb-bt');
-    mb_bt.click(function(){
+    mb_bt.click(function () {
         mb_div.show();
     });
     // 모바일 닫기 버튼 기능
     let mb_close = $('.mb-close');
-    mb_close.click(function(){
+    mb_close.click(function () {
         mb_div.hide();
     });
     // 배경 누르면 닫기
-    mb_div.click(function(){
+    mb_div.click(function () {
         mb_div.hide();
     });
     // 내용을 클릭하면 배경으로의 신호 전달을 막는다.
-    $('.mb-bg').click(function(event){
+    $('.mb-bg').click(function (event) {
         // 이벤트 전달 막기
         event.stopPropagation();
     });
@@ -50,9 +50,9 @@ $(document).ready(function () {
     });
 
     // window 너비 체크 
-    $(window).resize(function(){
+    $(window).resize(function () {
         let temp = $(window).width();
-        if(temp >= 880) {
+        if (temp >= 880) {
             mb_div.hide();
             $('.mb-mainmenu').removeClass('mb-mainmenu-open');
             $('.mb-submenu').hide();
@@ -68,14 +68,14 @@ window.onload = function () {
     // 사라지는 시점 px 값(banner가 보일때)
     let fixY = $('.banner').height();
 
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         // 스크롤바의 세로상단 px 값
         let temp = $(window).scrollTop();
         // 50은 banner의 높이 값 px
-        if(temp > fixY) {
+        if (temp > fixY) {
             header.addClass('header-fix');
             wrap.addClass('wrap-fix');
-        }else{
+        } else {
             header.removeClass('header-fix');
             wrap.removeClass('wrap-fix');
         }
@@ -83,7 +83,7 @@ window.onload = function () {
 
     // 상단 베너 닫기 기능
     let banner_close = $('.banner-close');
-    banner_close.click(function(){
+    banner_close.click(function () {
         fixY = 0;
         $('.banner').slideUp(300);
     });
