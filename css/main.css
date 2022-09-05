@@ -118,7 +118,7 @@ body {
 .mb-div .mb-top .mb-close {
   position: absolute;
   right: 0px;
-  top: 20px;
+  top: 70px;
   display: block;
   width: 20px;
   height: 20px;
@@ -534,6 +534,7 @@ body {
   color: #fff;
   background-color: #ffcc00;
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 /* 비주얼 반응형 */
