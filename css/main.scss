@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 * {
   margin: 0;
@@ -30,7 +30,8 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', 'Noto Sans KR', 'Malgun Gothic', 'Dotum', 'AppleGothic', sans-serif;
+  font-family: "Montserrat", "Noto Sans KR", "Malgun Gothic", "Dotum",
+    "AppleGothic", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
@@ -53,15 +54,13 @@ body {
   color: #fff;
 }
 
-
-
 /* 공통클래스 */
 // 내용의 너비
-$innerwidth : 1320px;
+$innerwidth: 1320px;
 
 .clearfix {
   &::after {
-    content: '';
+    content: "";
     position: relative;
     display: block;
     width: 100%;
@@ -75,6 +74,120 @@ $innerwidth : 1320px;
   width: 100%;
   max-width: $innerwidth;
   margin: 0 auto;
+}
+
+/* 안내창 */
+.modal-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 99999;
+}
+
+.modal-main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 20%);
+  border: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-main h1 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+  padding: 20px 0;
+}
+
+.modal-main .modal-icon {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.modal-main .modal-icon i {
+  font-size: 25px;
+  margin-top: 20px;
+  color: #ed1c24;
+  text-shadow: 2px 2px 2px rgb(212, 210, 210);
+}
+
+.modal-main h1 {
+  font-size: 23px;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+  text-shadow: 2px 2px 2px rgb(192, 192, 192);
+  padding-bottom: 20px;
+}
+
+.modal-main p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #999;
+  line-height: 1.8;
+}
+
+.modal-main strong {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #ed1c24;
+}
+
+.modal-bottom {
+  position: relative;
+  display: block;
+  margin-top: 50px;
+}
+.modal-bottom span {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.modal-bottom-icon {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-bottom-icon i {
+  font-size: 30px;
+  color: #999;
+  transition: all 0.5s;
+}
+
+.modal-bottom-icon i:hover {
+  color: #000;
+}
+
+.modal-close {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: transparent;
+  color: #999;
+}
+
+.modal-close:hover {
+  transform: rotate(90deg);
+  transition: transform 0.5s;
 }
 
 /* 모바일 메뉴 */
@@ -94,7 +207,6 @@ $innerwidth : 1320px;
     height: 100%;
     padding: 0 30px;
     background-color: #fff;
-
   }
 
   .mb-top {
@@ -127,7 +239,7 @@ $innerwidth : 1320px;
       display: block;
       width: 20px;
       height: 20px;
-      background: url('../images/btn-close.png') no-repeat center;
+      background: url("../images/btn-close.png") no-repeat center;
       background-size: contain;
       border: 0;
       cursor: pointer;
@@ -143,7 +255,7 @@ $innerwidth : 1320px;
       position: relative;
       display: block;
 
-      >li {
+      > li {
         position: relative;
         display: block;
         margin-bottom: 25px;
@@ -160,14 +272,14 @@ $innerwidth : 1320px;
       cursor: pointer;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         right: 0px;
         top: 50%;
         transform: translateY(-50%);
         width: 15px;
         height: 15px;
-        background: url('../images/ico-gnb-link-m.png') no-repeat 100%;
+        background: url("../images/ico-gnb-link-m.png") no-repeat 100%;
         background-size: contain;
       }
     }
@@ -177,7 +289,7 @@ $innerwidth : 1320px;
     }
 
     .mb-mainmenu-open::after {
-      background: url('../images/ico-gnb-m-active-up.png') no-repeat 100%;
+      background: url("../images/ico-gnb-m-active-up.png") no-repeat 100%;
       background-size: contain;
     }
 
@@ -195,14 +307,11 @@ $innerwidth : 1320px;
           position: relative;
           display: block;
           font-size: 14px;
-
         }
       }
     }
-
   }
 }
-
 
 /* 배너 */
 .banner {
@@ -222,17 +331,16 @@ $innerwidth : 1320px;
     }
 
     .banner-1 {
-      background: url('../images/banner_pc_1.jpg') no-repeat center;
+      background: url("../images/banner_pc_1.jpg") no-repeat center;
     }
 
     .banner-2 {
-      background: url('../images/banner_pc_2.jpg') no-repeat center;
+      background: url("../images/banner_pc_2.jpg") no-repeat center;
     }
 
     .banner-3 {
-      background: url('../images/banner_pc_3.jpg') no-repeat center;
+      background: url("../images/banner_pc_3.jpg") no-repeat center;
     }
-
 
     .sw-banner-control {
       position: absolute;
@@ -256,7 +364,7 @@ $innerwidth : 1320px;
         .swiper-pagination-bullet-active {
           width: 20px;
           height: 4px;
-          opacity: 1.0;
+          opacity: 1;
         }
       }
     }
@@ -269,7 +377,7 @@ $innerwidth : 1320px;
     display: block;
     width: 32px;
     height: 32px;
-    background: url('../images/x_icon.png') no-repeat center;
+    background: url("../images/x_icon.png") no-repeat center;
     border: 0;
     z-index: 9;
     cursor: pointer;
@@ -300,7 +408,7 @@ $innerwidth : 1320px;
       display: block;
       width: 111px;
       height: 42px;
-      background: url('../images/logo_new.png') no-repeat center;
+      background: url("../images/logo_new.png") no-repeat center;
       background-size: cover;
       margin-top: 20px;
       margin-right: 65px;
@@ -311,12 +419,12 @@ $innerwidth : 1320px;
       display: flex;
 
       .menu {
-        >li {
+        > li {
           position: relative;
           display: block;
           float: left;
 
-          >a {
+          > a {
             position: relative;
             display: block;
             line-height: 80px;
@@ -331,7 +439,7 @@ $innerwidth : 1320px;
             }
           }
 
-          &:hover>a {
+          &:hover > a {
             color: #f9d14d;
           }
 
@@ -371,7 +479,6 @@ $innerwidth : 1320px;
           }
         }
       }
-
     }
 
     .member {
@@ -420,7 +527,7 @@ $innerwidth : 1320px;
               font-size: 11px;
 
               &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%) rotate(45deg);
@@ -429,24 +536,21 @@ $innerwidth : 1320px;
                 background-color: #000;
                 width: 6px;
                 height: 6px;
-
-
               }
             }
           }
 
           .member-cart {
-            background: url('../images/ico-cart.png') no-repeat center;
+            background: url("../images/ico-cart.png") no-repeat center;
           }
 
           .member-mypage {
-            background: url('../images/ico-user.png') no-repeat center;
+            background: url("../images/ico-user.png") no-repeat center;
           }
 
           .member-login {
-            background: url('../images/ico-login.png') no-repeat center;
+            background: url("../images/ico-login.png") no-repeat center;
           }
-
         }
       }
     }
@@ -474,24 +578,24 @@ $innerwidth : 1320px;
   display: none;
   width: 30px;
   height: 23px;
-  background: url('../images/btn-menu-line.png') no-repeat center;
+  background: url("../images/btn-menu-line.png") no-repeat center;
   border: 0;
   cursor: pointer;
 }
 
 /* 상단 반응형 */
 @media all and (max-width: 1080px) {
-  .menu>li>a {
+  .menu > li > a {
     padding: 0 18px !important;
   }
 
-  .member-list>li {
+  .member-list > li {
     margin-left: 22px !important;
   }
 }
 
 @media all and (max-width: 880px) {
-  .menu>li>a {
+  .menu > li > a {
     padding: 0 10px !important;
   }
 }
@@ -517,9 +621,7 @@ $innerwidth : 1320px;
   .mb-bt {
     display: block;
   }
-
 }
-
 
 /* 비주얼 */
 .visual {
@@ -545,22 +647,22 @@ $innerwidth : 1320px;
     }
 
     .visual-1 {
-      background: url('../images/PC_minimal_new.png') no-repeat center;
+      background: url("../images/PC_minimal_new.png") no-repeat center;
       background-size: cover;
     }
 
     .visual-2 {
-      background: url('../images/PC1_newborn.png') no-repeat center;
+      background: url("../images/PC1_newborn.png") no-repeat center;
       background-size: cover;
     }
 
     .visual-3 {
-      background: url('../images/PC2_BabyEssence.png') no-repeat center;
+      background: url("../images/PC2_BabyEssence.png") no-repeat center;
       background-size: cover;
     }
 
     .visual-4 {
-      background: url('../images/PC3_Branding.png') no-repeat center;
+      background: url("../images/PC3_Branding.png") no-repeat center;
       background-size: cover;
     }
 
@@ -576,7 +678,7 @@ $innerwidth : 1320px;
         width: 10px;
         height: 10px;
         background-color: #fff;
-        opacity: 1.0;
+        opacity: 1;
         margin: 0 4px;
       }
 
@@ -622,7 +724,6 @@ $innerwidth : 1320px;
 
 /* 비주얼 반응형 */
 @media all and (max-width: 1320px) {
-
   .visual-img {
     height: 45vw !important;
   }
@@ -636,25 +737,25 @@ $innerwidth : 1320px;
   }
 }
 
-@media all and (max-width:800px) {
+@media all and (max-width: 800px) {
   .visual-img {
     height: 125vw !important;
   }
 
   .visual-1 {
-    background: url('../images/M_minimal_new.png') no-repeat center !important;
+    background: url("../images/M_minimal_new.png") no-repeat center !important;
   }
 
   .visual-2 {
-    background: url('../images/M1_newborn.png') no-repeat center !important;
+    background: url("../images/M1_newborn.png") no-repeat center !important;
   }
 
   .visual-3 {
-    background: url('../images/M2_BabyEssence.png') no-repeat center !important;
+    background: url("../images/M2_BabyEssence.png") no-repeat center !important;
   }
 
   .visual-4 {
-    background: url('../images/M3_Branding.png') no-repeat center !important;
+    background: url("../images/M3_Branding.png") no-repeat center !important;
   }
 
   .sw-visual-control {
@@ -662,25 +763,25 @@ $innerwidth : 1320px;
   }
 }
 
-@media all and (max-width:480px) {
+@media all and (max-width: 480px) {
   .visual-img {
     height: 124.375vw !important;
   }
 
   .visual-1 {
-    background: url('../images/v_480_1.png') no-repeat center !important;
+    background: url("../images/v_480_1.png") no-repeat center !important;
   }
 
   .visual-2 {
-    background: url('../images/v_480_2.png') no-repeat center !important;
+    background: url("../images/v_480_2.png") no-repeat center !important;
   }
 
   .visual-3 {
-    background: url('../images/v_480_3.png') no-repeat center !important;
+    background: url("../images/v_480_3.png") no-repeat center !important;
   }
 
   .visual-4 {
-    background: url('../images/v_480_4.png') no-repeat center !important;
+    background: url("../images/v_480_4.png") no-repeat center !important;
   }
 
   .sw-visual-control {
@@ -697,7 +798,7 @@ $innerwidth : 1320px;
     display: flex;
     flex-wrap: wrap;
 
-    >div {
+    > div {
       position: relative;
       display: flex;
       width: 50%;
@@ -727,22 +828,22 @@ $innerwidth : 1320px;
       }
 
       &:nth-child(1) {
-        background: url('../images/main_img01_2.png') no-repeat center;
+        background: url("../images/main_img01_2.png") no-repeat center;
         background-size: cover;
       }
 
       &:nth-child(4) {
-        background: url('../images/main_img02_2.png') no-repeat center;
+        background: url("../images/main_img02_2.png") no-repeat center;
         background-size: cover;
       }
 
       &:nth-child(5) {
-        background: url('../images/main_img03.png') no-repeat center;
+        background: url("../images/main_img03.png") no-repeat center;
         background-size: cover;
       }
 
       &:nth-child(8) {
-        background: url('../images/main_img04.png') no-repeat center;
+        background: url("../images/main_img04.png") no-repeat center;
         background-size: cover;
       }
     }
@@ -757,19 +858,18 @@ $innerwidth : 1320px;
   display: none !important;
   border: 2px solid #fff !important;
   color: #fff !important;
-
 }
 
 /* 카테고리 반응형*/
-@media all and (max-width:1320px) {
-  .category .inner>div {
+@media all and (max-width: 1320px) {
+  .category .inner > div {
     // 620/1320*100
     height: 46.96vw !important;
   }
 }
 
 @media all and(max-width:760px) {
-  .category .inner>div {
+  .category .inner > div {
     width: 100% !important;
     height: 100vw !important;
   }
@@ -783,7 +883,6 @@ $innerwidth : 1320px;
   }
 }
 
-
 /* 사이트맵 */
 .sitemap {
   position: relative;
@@ -795,7 +894,6 @@ $innerwidth : 1320px;
 .sitemap .inner {
   display: flex;
   justify-content: center;
-
 }
 
 .sitemap-menu {
@@ -804,7 +902,7 @@ $innerwidth : 1320px;
   width: 770px;
 }
 
-.sitemap-menu>li {
+.sitemap-menu > li {
   position: relative;
   display: table-cell;
   vertical-align: top;
@@ -812,14 +910,14 @@ $innerwidth : 1320px;
   // margin-right: 45px;
 }
 
-.sitemap-menu>li>a {
+.sitemap-menu > li > a {
   position: relative;
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
 }
 
-.sitemap-menu>li>a:hover {
+.sitemap-menu > li > a:hover {
   color: #ffcc00;
 }
 
@@ -833,7 +931,6 @@ $innerwidth : 1320px;
   position: relative;
   display: block;
   margin-bottom: 15px;
-
 }
 
 .sitemap-submenu li a {
@@ -846,12 +943,12 @@ $innerwidth : 1320px;
   color: #ffcc00;
 }
 
-.sitemap-menu>li:hover>a {
+.sitemap-menu > li:hover > a {
   color: #ffcc00;
 }
 
 /*사이트맵 반응형*/
-@media all and (max-width:800px) {
+@media all and (max-width: 800px) {
   .sitemap-menu {
     padding: 0 20px;
   }
@@ -901,7 +998,6 @@ $innerwidth : 1320px;
           font-size: 12px;
           color: #7e868c;
         }
-
       }
     }
 
@@ -912,7 +1008,7 @@ $innerwidth : 1320px;
       display: block;
       width: 155px;
       height: 30px;
-      background: url('../images/ico_insta.png') no-repeat center;
+      background: url("../images/ico_insta.png") no-repeat center;
     }
   }
 
@@ -953,7 +1049,7 @@ $innerwidth : 1320px;
   }
 }
 
-@media all and (max-width:800px) {
+@media all and (max-width: 800px) {
   .footer .inner {
     width: 100%;
   }

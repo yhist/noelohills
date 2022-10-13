@@ -1,5 +1,30 @@
 // 멀티미디어 요소 로딩전 실행
 $(document).ready(function () {
+    // 안내창 기능
+    // 추가기능(스크롤바 없애기)
+    $('html').css('overflow', 'hidden');
+    let modalWrap = $('.modal-wrap');
+    let modalClose = $('.modal-close');
+    modalClose.click(function(){
+        modalWrap.stop().fadeOut(200);
+        // 추가기능(스크롤바 살리기)
+        $('html').css('overflow', 'auto')
+    });
+    // 배경눌렀을때 닫기
+    let modalMain = $('.modal-main');
+    // 내용배경 클릭
+    modalMain.click(function(event){
+        // 클릭 정보 전달 막기
+        event.stopPropagation();
+    });
+    // 전체 배경 클릭
+    modalWrap.click(function(event){
+        $(this).stop().fadeOut(200);
+        $('html').css('overflow', 'auto')
+    });
+
+    });
+
     // 모바일 메뉴
     let mb_div = $('.mb-div');
     // 모바일 보기 버튼 기능
