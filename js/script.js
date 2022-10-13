@@ -125,9 +125,11 @@ window.onload = function () {
       delay: 2500,
       disableOnInteraction: false,
     },
+
     // touchMove 제거
     allowTouchMove: false,
   });
+
   // visual 슬라이드
   new Swiper(".sw-visual", {
     loop: true,
